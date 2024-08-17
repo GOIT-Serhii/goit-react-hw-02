@@ -1,0 +1,27 @@
+.optionsButtonsList {
+  display: flex;
+  gap: 8px;
+}
+
+.optionButton {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background-color: #4d5ae5;
+  cursor: pointer;
+  width: 169px;
+  height: 56px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  border-radius: 4px;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.optionButton:hover,
+.optionButton:focus {
+  background-color: #404bbf;
+}
