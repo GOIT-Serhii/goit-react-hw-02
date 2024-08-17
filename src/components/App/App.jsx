@@ -30,6 +30,7 @@ function App() {
     });
   };
   const totalFeedback = clicks.good + clicks.neutral + clicks.bad;
+  const positiveFeedback = Math.round((clicks.good / totalFeedback) * 100);
 
   const resetFeedback = () => {
     setClicks({
@@ -49,7 +50,7 @@ function App() {
       />
 
       {totalFeedback ? (
-        <Feedback value={clicks} total={totalFeedback} />
+        <Feedback value={clicks} positiveFeedback={positiveFeedback} />
       ) : (
         <Notification />
       )}

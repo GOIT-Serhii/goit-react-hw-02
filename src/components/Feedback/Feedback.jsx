@@ -1,6 +1,6 @@
 import css from "./Feedback.module.css";
 
-export default function Feedback({ value, total }) {
+export default function Feedback({ value, positiveFeedback }) {
   return (
     <ul>
       <li>
@@ -13,9 +13,7 @@ export default function Feedback({ value, total }) {
         <p className={css.feedbackText}>Bad: {value["bad"]}</p>
       </li>
       <li>
-        <p className={css.feedbackText}>
-          Positive: {Math.round((value["good"] / total) * 100)}%
-        </p>
+        <p className={css.feedbackText}>Positive: {positiveFeedback}%</p>
       </li>
     </ul>
   );
